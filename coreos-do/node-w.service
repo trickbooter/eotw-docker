@@ -1,11 +1,11 @@
 [Unit]
-Description=Redis DB
+Description=Node W
 After=docker.service
 
 [Service]
 TimeoutStartSec=0
-ExecStartPre=-/usr/bin/docker kill redis-db
-ExecStartPre=-/usr/bin/docker rm redis-db
-ExecStartPre=/usr/bin/docker pull trickbooter/redis-with-entrypoint
-ExecStart=/usr/bin/docker run --name redis-db trickbooter/redis-with-entrypoint cli -h 128.199.78.238
-ExecStop=/usr/bin/docker stop redis-db
+ExecStartPre=-/usr/bin/docker kill eotw-node-w
+ExecStartPre=-/usr/bin/docker rm eotw-node-w
+ExecStartPre=/usr/bin/docker pull trickbooter/eotw-node-w
+ExecStart=/usr/bin/docker run --name eotw-node-w -e REDIS_IP=128.199.72.148 trickbooter/eotw-node-w
+ExecStop=/usr/bin/docker stop eotw-node-w

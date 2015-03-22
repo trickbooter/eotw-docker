@@ -7,5 +7,5 @@ TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill redis-db
 ExecStartPre=-/usr/bin/docker rm redis-db
 ExecStartPre=/usr/bin/docker pull trickbooter/redis-with-entrypoint
-ExecStart=/usr/bin/docker run --name redis-db trickbooter/redis-with-entrypoint server
+ExecStart=/usr/bin/docker run --name redis-db -p 6379:6379 trickbooter/redis-with-entrypoint server
 ExecStop=/usr/bin/docker stop redis-db
