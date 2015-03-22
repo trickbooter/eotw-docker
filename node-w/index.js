@@ -5,10 +5,10 @@ var express = require('express'),
     util = require('util');
 
 nconf.argv()
-    .env();
+     .env();
 
 // constants
-var redisHost = nconf.get(REDIS_IP); //get from env or etcd
+var redisHost = nconf.get('REDIS_IP'); //get from env or etcd
 var redisPort = 6379;
 
 // configure redis

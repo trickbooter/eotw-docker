@@ -4,9 +4,12 @@ var express = require('express'),
     redis = require('redis'),
     util = require('util');
 
+nconf.argv()
+     .env();
+
 // constants
 var httpPort = 8080;
-var redisHost = '10.0.0.7';
+var redisHost = nconf.get('REDIS_IP'); //get from env or etcd
 var redisPort = 6379;
 
 // configure redis
