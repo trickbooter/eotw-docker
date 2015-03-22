@@ -1,0 +1,19 @@
+{
+  "name": "docker-centos-hello",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Node.js Hello world app on CentOS using docker",
+  "author": "Paul Harris <paul@trickbooter.com>",
+  "scripts": {
+    "start": "node index.js",
+    "predeploy": "echo im about to deploy",
+    "postdeploy": "echo ive deployed"
+  },
+  "dependencies": {
+    "express": "3.2.4",
+    "nconf" : "",
+    "moment" : "",
+    "redis" : "",
+    "util" : ""
+  }
+}
