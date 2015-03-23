@@ -31,9 +31,9 @@ app.get('/', function (req, res) {
   // build response
   var page = util.format('<h1>Hello EotW @ %s</h1>', moment().format('MMMM Do YYYY, HH:mm:ss'));
   page += util.format('Connected to Redis %s on %s:%s</p>', client.server_info.redis_version, redisHost, redisPort);
-  page += '<h3>Reading Top 5 Keys</h3></p>';
+  page += '<h3>Reading Top 20 Keys</h3></p>';
 
-  client.lrange('myList', 0, 4, function(err, items) {
+  client.lrange('myList', 0, 19, function(err, items) {
     if(err) {
       console.log('Error: ' + err)
     }

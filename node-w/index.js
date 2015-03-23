@@ -24,11 +24,14 @@ client.on('connect', function() {
         tmrPush();
     });
 
+global.ctr = 0;
+
 var tmrPush = function() {
   var intr = Math.round(Math.random() * 100)/100;
-  var item = intr.toString() + " pushed @ " + moment().format("HH:mm:ss.SS");
-  console.log('pushing ' + intr.toString() + '...');
+  var item = ctr.toString() + ' : ' + intr.toString() + " pushed @ " + moment().format("HH:mm:ss.SS");
+  console.log('pushing ctr ' + global.ctr.toString() + ' ' + intr.toString() + '...');
   client.lpush('myList', item);
+  global.ctr = global.ctr + 1
   setTimeout(tmrPush, 3000*intr);
 }
 
