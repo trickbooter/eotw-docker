@@ -44,6 +44,7 @@ ssh-add ~/.ssh/digitalocean
 # Run Redis (pu:128.199.66.71 pr:10.130.143.155)
 ssh root@128.199.66.71
 docker run -d --name redis -p 10.130.143.155:6379:6379 trickbooter/redis
+
 # Run node-r (pu: 128.199.78.238 pr: 10.130.143.157)
 ssh root@128.199.78.238
 docker run -d --name node-r -p 8080:8080
