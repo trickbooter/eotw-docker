@@ -6,6 +6,7 @@ Scripts for the Edge of the Web conference
 ```bash
 boot2docker up
 $(boot2docker shellinit)
+# note in order to get these examples working on boot2docker you need to nat port 6379 on the virtualbox boot2docker image.
 ```
 
 ## my-first-docker
@@ -36,7 +37,10 @@ docker inspect redis
 docker logs redis
 ```
 
-## redis with node
+## redis with nodes on Digital Ocean
+
+these notes won't work for anyone else. These droplets are now destroyed.
+
 ```bash
 # add key
 ssh-add ~/.ssh/digitalocean
