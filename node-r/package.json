@@ -10,7 +10,7 @@
     "postdeploy": "echo ive deployed"
   },
   "dependencies": {
-    "express": "3.2.4",
+    "express": "4.17.1",
     "nconf" : "",
     "moment" : "",
     "redis" : "",
